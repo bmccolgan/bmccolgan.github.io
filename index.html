@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR.js + A-Frame Multitarget Cube with Pattern Markers</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    </a-marker>
+    <a-marker type="pattern" size=1 preset="custom" url="data/letterA.patt">
+      <!-- Image for the front face of the cube -->
+      <a-box color="tomato" depth="2" height="4" width="0.5" position="0 1 0"></a-box>
+    </a-marker>
+    <a-marker type="pattern" preset="custom" url="data/letterB.patt">
+      <!-- Image for the back face of the cube -->
+      <a-box color="tomato" depth="2" height="4" width="0.5" position="0 1 0"></a-box>
+    </a-marker>
+    <a-marker type="pattern" preset="custom" url="data/letterC.patt">
+      <!-- Image for the top face of the cube -->
+      <a-box color="tomato" depth="2" height="4" width="0.5" position="0 1 0"></a-box>
+    </a-marker>
+    <a-marker type="pattern" preset="custom" url="data/letterD.patt">
+      <!-- Image for the bottom face of the cube -->
+      <a-box color="tomato" depth="2" height="4" width="0.5" position="0 1 0"></a-box>
+    </a-marker>
+    <a-marker type="pattern" preset="custom" url="data/letterF.patt">
+      <!-- Image for the right face of the cube -->
+      <a-box color="tomato" depth="2" height="4" width="0.5" position="0 1 0"></a-box>
+
+    </a-marker>
+
+    <a-marker type="pattern" preset="kanji">
+      <!-- Image for the left face of the cube -->
+      <a-box color="tomato" depth="2" height="4" width="0.5" position="0 1 0"></a-box>
+    </a-marker>
+    <!-- Define the cube entity -->
+    <a-box position="0 0 0" depth="1" height="1" width="1" material="opacity: 0;"></a-box>
+    <!-- Camera entity to view the scene -->
+    <a-entity camera></a-entity>
+    <!-- <a-camera-static></a-camera-static> -->
+  </a-scene>
+</body>
+</html>
